@@ -1,0 +1,10 @@
+all:
+    hosts:
+      localhost
+    children:
+      media:
+        hosts:
+          localhost
+      web:
+        hosts:
+          localhost

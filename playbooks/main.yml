@@ -1,0 +1,15 @@
+---
+- hosts: all
+  connection: local
+  vars:
+    packages: "{{packages_media}} + {{packages_web}}"
+    repository_ppa: "{{repository_ppa_media}} + {{repository_ppa_web | default([])}}"
+  tasks:  
+  - name: add repository
+    apt_repository:
+        repo: "{{ item }}"
+        state: present 
+    with_items: "{{ repository_ppa }}"
+  - name: install packages
+    apt:
+      pkg: "{{ packages }}"

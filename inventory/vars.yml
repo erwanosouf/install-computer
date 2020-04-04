@@ -1,0 +1,30 @@
+all:
+    hosts:
+      localhost
+    children:
+      media:
+        vars:
+          repository_ppa_media:
+            - ppa:lazka/ppa
+            - ppa:mixxx/mixxx
+            - ppa:robert-tari/main
+          packages_media:
+            - vlc
+            - exfalso
+            - quodlibet
+            - mixxx
+            - gstreamer1.0-plugins-bad 
+            - gstreamer1.0-libav
+            - kodi
+            - gimp
+            - shntool
+            - mac
+            - soundkonverter
+      web:
+        vars:
+          packages_web:
+            - filezilla
+            - chromium-browser
+            - transmission
+            - openvpn
+            - network-manager-openvpn
