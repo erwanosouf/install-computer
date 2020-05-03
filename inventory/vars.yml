@@ -20,6 +20,7 @@ all:
             - shntool
             - mac
             - soundkonverter
+            - pavucontrol
       web:
         vars:
           packages_web:
@@ -28,3 +29,13 @@ all:
             - transmission
             - openvpn
             - network-manager-openvpn
+      utils:
+        vars:
+          package_utils:
+            - keepassxc
+            - unrar
+      dev:
+        vars:
+          package_dev:
+            - git
+          
