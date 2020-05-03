@@ -8,3 +8,9 @@ all:
       web:
         hosts:
           localhost
+      utils:
+        hosts:
+          localhost
+      dev:
+        hosts:
+          localhost
